@@ -20,7 +20,8 @@ app.get('/api/search', async (req, res) => {
         });
         res.json(response.data);
     } catch (error) {
-        console.error('Error is fetching data from HubSpot:', error);
+        console.error('Error is the fetching
+                      fetching data from HubSpot:', error);
         res.status(500).send('Server Error');
     }
 });
