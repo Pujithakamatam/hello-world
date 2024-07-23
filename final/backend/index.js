@@ -7,11 +7,8 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 const accessToken = process.env.HUBSPOT_ACCESS_TOKEN;
-
-
 app.use(cors());
 app.use(express.json());
-
 app.get('/api/search', async (req, res) => {
     const query = req.query.q;
     try {
