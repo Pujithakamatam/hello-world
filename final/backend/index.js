@@ -7,11 +7,8 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 const accessToken = process.env.HUBSPOT_ACCESS_TOKEN;
-
-
 app.use(cors());
 app.use(express.json());
-
 app.get('/api/search', async (req, res) => {
     const query = req.query.q;
     try {
@@ -23,7 +20,8 @@ app.get('/api/search', async (req, res) => {
         });
         res.json(response.data);
     } catch (error) {
-        console.error('Error is fetching data from HubSpot:', error);
+        console.error('Error is the fetching
+                      fetching data from HubSpot:', error);
         res.status(500).send('Server Error');
     }
 });
